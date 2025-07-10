@@ -2,27 +2,28 @@ package es.cic.curso25;
 
 public class Coche {
 
+    private final double CONSUMO_INSTANTANIO  = 4.3;
+    private int velocidad = 0;
+
     public int getVelocidad() {
-        // TODO Pendiente de Completar
-        throw new UnsupportedOperationException("No implementado");
+        return velocidad;
+       
     }
 
     public double getConsumo() {
-        // TODO Pendiente de Completar
-        throw new UnsupportedOperationException("No implementado");
+        return (double)velocidad / 100.0 * CONSUMO_INSTANTANIO;
     }
 
     public int acelerar(int incrementoDeVelocidad) {
 
-        // TODO Pendiente de Completar
-        throw new UnsupportedOperationException("No implementado");
+        this.velocidad += incrementoDeVelocidad;
+        return this.velocidad;
 
     }
 
     public int frenar(int decrementoDeVelocidad) {
-
-        // TODO Pendiente de Completar
-        throw new UnsupportedOperationException("No implementado");
+        this.velocidad -= decrementoDeVelocidad;
+        return this.velocidad;
 
     }
 }

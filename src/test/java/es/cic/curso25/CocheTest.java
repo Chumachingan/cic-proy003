@@ -3,7 +3,6 @@ package es.cic.curso25;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
 public class CocheTest {
@@ -11,43 +10,35 @@ public class CocheTest {
     private Coche cut;
 
     @BeforeEach
-    private void setUp() {
+    void setUp() {
         cut = new Coche();
     }
 
-    @Disabled
     @Test
     void testAcelerar() {
         cut.acelerar(34);
         int velocidadFinal = cut.acelerar(23);
-
         assertEquals(57, velocidadFinal);
     }
 
-    @Disabled
     @Test
     void testFrenar() {
         cut.frenar(50);
         int velocidadFinal = cut.frenar(23);
-
         assertEquals(27, velocidadFinal);
     }
 
-    @Disabled
     @Test
     void testGetConsumo() {
         cut.acelerar(50);
         double consumo = cut.getConsumo();
-
-        assertEquals(2.15, consumo);
+        assertEquals(2.15, consumo, 0.00001);
     }
 
-    @Disabled
     @Test
     void testGetVelocidad() {
         cut.acelerar(50);
         int velocidad = cut.getVelocidad();
-
         assertEquals(50, velocidad);
     }
 }
