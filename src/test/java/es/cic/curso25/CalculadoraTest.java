@@ -57,4 +57,16 @@ public class CalculadoraTest {
         double valorActual = cut.getTotal();
         assertEquals(5, valorActual, 0.000001);
     }
+    @Test
+    void testLimpiar() {
+        // Preparo
+        Calculadora cut = new Calculadora();
+        // Ejecuto
+        cut.sumar(10);
+        cut.limpiar();
+
+        // Verifico
+        double valorActual = cut.getTotal();
+        assertEquals(0, valorActual, 0.000001);
+    }
 }
