@@ -31,4 +31,30 @@ public class CalculadoraTest {
         double valorActual = cut.getTotal();
         assertEquals(7, valorActual, 0.000001);
     }
+
+    @Test
+    public void testMultiplicar() {
+        // Preparo
+        Calculadora cut = new Calculadora();
+        // Ejecuto
+        cut.sumar(10);
+        cut.multiplicar(2);
+
+        // Verifico
+        double valorActual = cut.getTotal();
+        assertEquals(20, valorActual, 0.000001);
+    }
+
+    @Test
+    public void testDividir() {
+        // Preparo
+        Calculadora cut = new Calculadora();
+        // Ejecuto
+        cut.sumar(20);
+        cut.dividir(4);
+
+        // Verifico
+        double valorActual = cut.getTotal();
+        assertEquals(5, valorActual, 0.000001);
+    }
 }
