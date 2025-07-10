@@ -23,9 +23,9 @@ public class CocheTest {
 
     @Test
     void testFrenar() {
-        cut.frenar(50);
-        int velocidadFinal = cut.frenar(23);
-        assertEquals(27, velocidadFinal);
+        cut.acelerar(50);
+        int velocidadFinal = cut.frenar(20);
+        assertEquals(30, velocidadFinal);
     }
 
     @Test
